@@ -1,0 +1,241 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 16px 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 540px;
+}
+
+/* ── ヘッダー ── */
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.count {
+  margin-top: 6px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* ── 入力エリア ── */
+.inputArea {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex: 1;
+  height: 52px;
+  padding: 0 18px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  font-family: inherit;
+  outline: none;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.12);
+}
+
+.addButton {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.15s, transform 0.1s, opacity 0.15s;
+}
+
+.addButton:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: scale(1.04);
+}
+
+.addButton:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.addButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── リスト ── */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 48px 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.emptyIcon {
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+/* ── タスクアイテム ── */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.item:hover {
+  background: var(--surface-hover);
+  border-color: #d8d4cf;
+}
+
+.itemCompleted {
+  opacity: 0.6;
+}
+
+.itemText {
+  flex: 1;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  word-break: break-word;
+  transition: text-decoration 0.1s;
+}
+
+.itemCompleted .itemText {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+/* ── チェックボックス ── */
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s, background 0.15s;
+  color: #fff;
+}
+
+.checkbox:hover {
+  border-color: var(--accent);
+}
+
+.checkboxChecked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── 削除ボタン ── */
+.deleteButton {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s, background 0.15s;
+}
+
+.item:hover .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  color: var(--danger);
+  background: rgba(229, 115, 115, 0.1);
+}
+
+/* ── フッター ── */
+.footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clearButton {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  transition: color 0.15s, background 0.15s;
+}
+
+.clearButton:hover {
+  color: var(--danger);
+  background: rgba(229, 115, 115, 0.08);
+}
+
+/* ── レスポンシブ ── */
+@media (max-width: 480px) {
+  .main {
+    padding: 32px 12px 60px;
+  }
+
+  .title {
+    font-size: 1.625rem;
+  }
+
+  .deleteButton {
+    opacity: 1;
+  }
+}

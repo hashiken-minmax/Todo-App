@@ -1,0 +1,34 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f7f5f2;
+  --surface: #ffffff;
+  --surface-hover: #fafaf8;
+  --border: #e8e4df;
+  --text-primary: #1a1814;
+  --text-secondary: #8a8480;
+  --accent: #5c6bc0;
+  --accent-hover: #4a58b0;
+  --danger: #e57373;
+  --danger-hover: #d32f2f;
+  --completed: #a8b5a0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
