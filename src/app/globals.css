@@ -5,21 +5,23 @@
 }
 
 :root {
-  --bg: #f7f5f2;
+  --bg: #f0f9f4;
   --surface: #ffffff;
-  --surface-hover: #fafaf8;
-  --border: #e8e4df;
-  --text-primary: #1a1814;
-  --text-secondary: #8a8480;
-  --accent: #5c6bc0;
-  --accent-hover: #4a58b0;
+  --surface-hover: #f5fbf7;
+  --border: #c8e6d4;
+  --border-focus: #4caf82;
+  --text-primary: #1a2e22;
+  --text-secondary: #5c7a68;
+  --accent: #2e7d5a;
+  --accent-hover: #245f47;
+  --accent-light: #e8f5ef;
   --danger: #e57373;
   --danger-hover: #d32f2f;
-  --completed: #a8b5a0;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-sm: 0 1px 4px rgba(46, 125, 90, 0.08);
+  --shadow-md: 0 4px 20px rgba(46, 125, 90, 0.12);
   --radius: 12px;
   --radius-sm: 8px;
+  --radius-xs: 6px;
 }
 
 html {
@@ -31,4 +33,7 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(46, 125, 90, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(76, 175, 130, 0.05) 0%, transparent 50%);
 }
